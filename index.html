@@ -2,64 +2,208 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>RGDDS — Guía simple para mamá</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RGDDS — Guía simple para mamá (Regalo de Navidad)</title>
 <style>
-  body { font-family: Arial, Helvetica, sans-serif; line-height: 1.5; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #111; }
-  h1 { font-size: 24px; }
-  h2 { font-size: 18px; margin-top: 24px; }
-  ul { margin-top: 6px; }
-  .note { margin-top: 30px; padding-top: 12px; border-top: 1px solid #999; font-size: 13px; color: #444; }
-  @media print { body { margin: 0; } }
+  :root {
+    --bg: #f7f7f9;
+    --card: #ffffff;
+    --text: #151515;
+    --muted: #555;
+    --accent: #1f6feb;
+    --border: #ddd;
+    --xmas: #b3001b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .wrap {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 24px 18px 50px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  }
+  .hero-img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 12px;
+    background: #eee;
+  }
+  .img-caption {
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 22px;
+  }
+  h1 {
+    font-size: 28px;
+    margin: 0 0 8px;
+    text-align: center;
+  }
+  .subtitle {
+    text-align: center;
+    color: var(--muted);
+    margin: 0 0 26px;
+    font-size: 15px;
+  }
+  .xmas-banner {
+    background: #fff3f3;
+    border: 1px solid #f0c0c0;
+    color: var(--xmas);
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    font-size: 15px;
+  }
+  h2 {
+    font-size: 19px;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 4px;
+  }
+  p, li { font-size: 16px; }
+  ul, ol { margin-top: 6px; padding-left: 24px; }
+  li { margin-bottom: 7px; }
+  strong { color: #000; }
+  .note {
+    margin-top: 34px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .source {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--muted);
+    word-break: break-word;
+  }
+  a { color: var(--accent); }
+  @media print {
+    body { background: #fff; }
+    .wrap { padding: 0; }
+    .card { border: none; box-shadow: none; padding: 0; }
+    .hero-img { max-height: 300px; }
+  }
 </style>
 </head>
 <body>
+<div class="wrap">
+  <div class="card">
 
-<h1>RGDDS — Guía simple para mamá</h1>
+    <img
+      id="heroImg"
+      class="hero-img"
+      src="https://raw.githubusercontent.com/THecoder1231/Reasoning/main/IMG_0614.jpeg"
+      alt="RGDDS — consola portátil de juegos (imagen del dispositivo)"
+      onerror="
+        if (!this.dataset.triedMaster) {
+          this.dataset.triedMaster = '1';
+          this.src='https://raw.githubusercontent.com/THecoder1231/Reasoning/master/IMG_0614.jpeg';
+        } else {
+          this.style.display='none';
+          document.getElementById('imgFallback').style.display='block';
+        }
+      "
+    >
+    <p id="imgFallback" style="display:none; text-align:center; color:#777;">
+      No se pudo cargar IMG_0614.jpeg. Revisa que esté en la raíz del repositorio y que la rama sea main o master.
+    </p>
+    <p class="img-caption">Imagen del RGDDS (el dispositivo portátil)</p>
 
-<h2>Qué es</h2>
-<p>El RGDDS es una consola de juegos <strong>PORTÁTIL</strong>. “Portátil” significa que la sostienes en las manos y juegas en cualquier lugar, sin necesidad de un televisor. Yo (<strong>Fernando</strong>) soy quien la quiere, y me la pueden dar o regalar. <strong>Rene y yo podemos compartirla</strong> como nuestro dispositivo de juegos.</p>
+    <h1>RGDDS — Guía simple para mamá</h1>
+    <p class="subtitle">Hecha por DeepSeek · Investigación incluida</p>
 
-<h2>Por qué es buena</h2>
-<ul>
-  <li><strong>PORTÁTIL:</strong> fácil de llevar y jugar donde sea.</li>
-  <li><strong>Para la TV:</strong> se puede conectar a un televisor con un adaptador USB-C a HDMI y el cargador.</li>
-  <li><strong>Controles Bluetooth:</strong> puedes usar controles inalámbricos, así que 2 personas pueden jugar fácilmente en la TV. Con 4 controles y un juego para 4 jugadores, hasta 4 personas pueden jugar.</li>
-  <li><strong>Traducción con IA:</strong> puede traducir el texto que aparece en la pantalla.</li>
-  <li><strong>Android:</strong> usa Android, así que puedes instalar aplicaciones como traductores y otras cosas útiles.</li>
-  <li><strong>Tarjeta SD:</strong> si se llena el espacio, puedes agregar una tarjeta SD para tener más almacenamiento.</li>
-  <li><strong>Duradera:</strong> tiene palancas Hall Effect (duran más y no se desgastan fácilmente) y un ventilador interno como una computadora, para que no se caliente.</li>
-  <li><strong>Mini computadora:</strong> con una aplicación llamada <strong>AndroidDex</strong>, puede funcionar como una computadora pequeña. AndroidDex hace que la pantalla de Android se vea y funcione como la de una computadora de escritorio — con una barra de tareas, ventanas que puedes mover y un puntero de mouse — cuando se conecta a una TV o monitor. Puedes usarla para navegar, escribir y usar aplicaciones con un diseño tipo computadora. Descarga AndroidDex <strong>SOLO</strong> desde la página oficial de GitHub (Shrey113/Android-Dex) — esa es la fuente segura y autorizada.</li>
-  <li><strong>Mismos creadores:</strong> está hecha por las mismas personas que hicieron la RG351P que yo tenía. Mi RG351P duró como 2 o 3 años y se rompió porque mi hermanito le hizo algo mientras yo estaba en la escuela.</li>
-</ul>
+    <div class="xmas-banner">
+      🎄 Esta guía es para pedir el RGDDS como regalo de Navidad 🎄
+    </div>
 
-<h2>Cómo jugar en la TV</h2>
-<ol>
-  <li>Conecta un adaptador USB-C a HDMI en el RGDDS.</li>
-  <li>Conecta un cable HDMI del adaptador al televisor.</li>
-  <li>Enchufa el cargador para que no se acabe la batería.</li>
-  <li>Cambia la TV a la entrada HDMI correcta.</li>
-  <li>Juega en pantalla grande.</li>
-</ol>
+    <h2>Qué es</h2>
+    <p>
+      El RGDDS es una consola de juegos <strong>PORTÁTIL</strong>. “Portátil” significa que la sostienes
+      en las manos y juegas en cualquier lugar, sin necesidad de un televisor.
+      Yo (<strong>Fernando</strong>) soy quien la quiere, y me la pueden dar o regalar.
+      <strong>Rene y yo podemos compartirla</strong> como nuestro dispositivo de juegos.
+      Es una idea para <strong>Navidad</strong>.
+    </p>
 
-<h2>Para 2 o 4 jugadores</h2>
-<p>Usa controles Bluetooth. Para 4 jugadores, necesitas 4 controles y un juego que sea para 4 personas.</p>
+    <h2>Por qué es buena</h2>
+    <ul>
+      <li><strong>PORTÁTIL:</strong> fácil de llevar y jugar donde sea.</li>
+      <li><strong>Para la TV:</strong> se puede conectar a un televisor con un adaptador USB-C a HDMI y el cargador.</li>
+      <li><strong>Controles Bluetooth:</strong> puedes usar controles inalámbricos, así que 2 personas pueden jugar fácilmente en la TV. Con 4 controles y un juego para 4 jugadores, hasta 4 personas pueden jugar.</li>
+      <li><strong>Traducción con IA:</strong> puede traducir el texto que aparece en la pantalla.</li>
+      <li><strong>Android:</strong> usa Android, así que puedes instalar aplicaciones como traductores y otras cosas útiles.</li>
+      <li><strong>Tarjeta SD:</strong> si se llena el espacio, puedes agregar una tarjeta SD para tener más almacenamiento.</li>
+      <li><strong>Duradera:</strong> tiene palancas Hall Effect (duran más y no se desgastan fácilmente) y un ventilador interno como una computadora, para que no se caliente.</li>
+      <li><strong>Mini computadora:</strong> con una aplicación llamada <strong>AndroidDex</strong>, puede funcionar como una computadora pequeña. AndroidDex hace que la pantalla de Android se vea y funcione como la de una computadora de escritorio — con una barra de tareas, ventanas que puedes mover y un puntero de mouse — cuando se conecta a una TV o monitor. Puedes usarla para navegar, escribir y usar aplicaciones con un diseño tipo computadora. Descarga AndroidDex <strong>SOLO</strong> desde la página oficial de GitHub (Shrey113/Android-Dex) — esa es la fuente segura y autorizada.</li>
+      <li><strong>Mismos creadores:</strong> está hecha por las mismas personas que hicieron la RG351P que yo tenía. Mi RG351P duró como 2 o 3 años y se rompió porque mi hermanito le hizo algo mientras yo estaba en la escuela.</li>
+    </ul>
 
-<h2>Recuerda</h2>
-<ul>
-  <li>Primero es <strong>PORTÁTIL</strong>: juega donde quieras.</li>
-  <li>La TV es opcional: USB-C a HDMI + cargador.</li>
-  <li>AndroidDex solo desde el GitHub oficial.</li>
-  <li>Si necesitas más espacio, agrega una tarjeta SD.</li>
-  <li>Es de los mismos creadores de la RG351P, así que cuídala de mi hermanito.</li>
-  <li>Fernando la quiere, y Fernando y Rene pueden compartirla.</li>
-</ul>
+    <h2>Cómo jugar en la TV</h2>
+    <ol>
+      <li>Conecta un adaptador USB-C a HDMI en el RGDDS.</li>
+      <li>Conecta un cable HDMI del adaptador al televisor.</li>
+      <li>Enchufa el cargador para que no se acabe la batería.</li>
+      <li>Cambia la TV a la entrada HDMI correcta.</li>
+      <li>Juega en pantalla grande.</li>
+    </ol>
 
-<h2>En una frase</h2>
-<p>El RGDDS es una consola <strong>PORTÁTIL</strong> muy buena que también se conecta a la TV con USB-C a HDMI y cargador, usa controles Bluetooth para jugar de a 2 o 4 personas, traduce el texto en pantalla, tiene apps de Android, tarjeta SD, palancas Hall Effect y ventilador, puede funcionar como una PC pequeña con AndroidDex, y es de los mismos creadores de mi RG351P — y Fernando y Rene pueden compartirla.</p>
+    <h2>Para 2 o 4 jugadores</h2>
+    <p>
+      Usa controles Bluetooth. Para 4 jugadores, necesitas 4 controles y un juego que sea para 4 personas.
+    </p>
 
-<div class="note">
-  Nota: Esta guía fue hecha por DeepSeek y tomó aproximadamente 28 minutos crearla, incluyendo la investigación sobre AndroidDex y las otras características.
+    <h2>Recuerda</h2>
+    <ul>
+      <li>Primero es <strong>PORTÁTIL</strong>: juega donde quieras.</li>
+      <li>La TV es opcional: USB-C a HDMI + cargador.</li>
+      <li>AndroidDex solo desde el GitHub oficial.</li>
+      <li>Si necesitas más espacio, agrega una tarjeta SD.</li>
+      <li>Es de los mismos creadores de la RG351P, así que cuídala de mi hermanito.</li>
+      <li>Fernando la quiere, y Fernando y Rene pueden compartirla.</li>
+      <li>Idea para <strong>Navidad</strong> 🎄.</li>
+    </ul>
+
+    <h2>En una frase</h2>
+    <p>
+      El RGDDS es una consola <strong>PORTÁTIL</strong> muy buena que también se conecta a la TV con
+      USB-C a HDMI y cargador, usa controles Bluetooth para jugar de a 2 o 4 personas, traduce el texto
+      en pantalla, tiene apps de Android, tarjeta SD, palancas Hall Effect y ventilador, puede funcionar
+      como una PC pequeña con AndroidDex, y es de los mismos creadores de mi RG351P — y Fernando y Rene
+      pueden compartirla. Es una idea para <strong>Navidad</strong>.
+    </p>
+
+    <p class="source">
+      Imagen del RGDDS usada desde el repositorio:
+      <a href="https://github.com/THecoder1231/Reasoning/" target="_blank" rel="noopener">
+        github.com/THecoder1231/Reasoning
+      </a>
+    </p>
+
+    <div class="note">
+      Nota: Esta guía fue hecha por DeepSeek y tomó aproximadamente 28 minutos crearla,
+      incluyendo la investigación sobre AndroidDex y las otras características.
+    </div>
+
+  </div>
 </div>
-
 </body>
 </html>
